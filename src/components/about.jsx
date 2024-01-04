@@ -14,29 +14,21 @@ export const About = () => {
         </div>
         <h1 className="text-3xl tracking-tight">
           <p className="text-xl tracking-tight">
-            A dedicated web developer committed to delivering high-quality
-            digital solutions. With a solid foundation in{" "}
-            <strong className="underline text-indigo-500">front-end</strong> and{" "}
-            <strong className="underline text-indigo-500">back-end</strong>{" "}
-            development, I specialize in creating responsive and user-friendly
-            websites. I bring 2 years of experience collaborating with teams to
-            meet project goals and exceed client expectations. My passion for
-            web development extends to a keen interest in emerging technologies
-            and trends, ensuring I stay at the forefront of this dynamic field.
-            I thrive in fast-paced environments, leveraging my skills in{" "}
-            <strong className="underline text-indigo-500">JavaScript</strong>,{" "}
-            <strong className="underline text-indigo-500">Node</strong>,{" "}
-            <strong className="underline text-indigo-500">React</strong>,{" "}
-            <strong className="underline text-indigo-500">NextJS</strong>,{" "}
-            <strong className="underline text-indigo-500">MongoDB</strong> to
-            tackle challenges and deliver innovative solutions. I&apos;m eager
-            to contribute my expertise to a team that values creativity,
-            innovation, and a relentless pursuit of excellence in web
-            development. Let&apos;s connect and explore how my skills can
-            elevate your projects to new heights.
+            Being a web developer allows me to combine my passion for technology
+            with creativity. My expertise lies in{" "}
+            <span className="text-indigo-500  ml-1">React</span>{" "}
+            <span className="text-indigo-500  ml-1">JavaScript</span>{" "}
+            <span className="text-indigo-500  ml-1">TypeScript</span>
+            <span className="text-indigo-500  ml-1">Node</span> and{"  "}
+            <span className="text-indigo-500">NextJS</span>. I thrive on the
+            challenges of crafting seamless, responsive, and user-friendly web
+            applications. With a keen eye for detail and a commitment to staying
+            updated with the latest trends, I enjoy turning ideas into reality
+            through clean, efficient code. My goal is to not just meet
+            expectations but to exceed them by delivering innovative solutions
+            that resonate with users and make a lasting impact.
           </p>
         </h1>
-
         <div className="flex items-center justify-center my-5 gap-x-5">
           <Link to="https://www.linkedin.com/in/kyrylcherevko/" target="_blank">
             <button className="p-4 rounded-full group relative bg-indigo-500 scale-100 active:scale-90 transition-all">

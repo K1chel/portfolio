@@ -27,16 +27,11 @@ const Hero = () => {
           </Reveal>
           <Reveal>
             <p className="pointer-events-auto max-w-xl text-sm  tracking-wider text-slate-300 md:text-base font-sans">
-              My name is Kyryl, a passionate web developer with 2 years of
-              hands-on experience crafting engaging and dynamic digital
-              experiences. With a strong foundation in front-end and back-end
-              technologies such as HTML, CSS, JavaScript, and React , NextJS,
-              Express, I specialize in creating responsive, user-friendly
-              websites that marry functionality with aesthetics.
+              My name is Kyryl , a passionate web developer, with knowledge in a
+              wide range of technologies and frameworks. I specialize in
+              creating responsive, user-friendly websites that marry
+              functionality with aesthetics.
             </p>
-            {/* <p className="text-sm font-medium font-mono my-2 text-indigo-500 bg-black/40 w-fit p-[2px] underline underline-offset-2">
-              cherevko022@gmail.com
-            </p> */}
           </Reveal>
           <Reveal>
             <button
