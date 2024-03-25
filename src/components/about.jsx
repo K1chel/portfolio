@@ -10,12 +10,9 @@ export const About = () => {
           <h1 className="text-5xl">About me</h1>
         </div>
         <div className="flex items-center justify-center w-full my-5">
-          <div className="p-[1px] rounded-full h-10 bg-zinc-800" />
-        </div>
-        <h1 className="text-3xl tracking-tight">
           <p className="text-xl tracking-tight">
-            Being a web developer allows me to combine my passion for technology
-            with creativity. My expertise lies in{" "}
+            Being a Software Developer allows me to combine my passion for
+            technology with creativity. My expertise lies in{" "}
             <span className="text-indigo-500  ml-1">React</span>{" "}
             <span className="text-indigo-500  ml-1">JavaScript</span>{" "}
             <span className="text-indigo-500  ml-1">TypeScript</span>
@@ -28,7 +25,10 @@ export const About = () => {
             expectations but to exceed them by delivering innovative solutions
             that resonate with users and make a lasting impact.
           </p>
-        </h1>
+
+          <div className="p-[1px] rounded-full h-10 bg-zinc-800" />
+        </div>
+        <h1 className="text-3xl tracking-tight"></h1>
         <div className="flex items-center justify-center my-5 gap-x-5">
           <Link to="https://www.linkedin.com/in/kyrylcherevko/" target="_blank">
             <button className="p-4 rounded-full group relative bg-indigo-500 scale-100 active:scale-90 transition-all">

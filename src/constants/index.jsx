@@ -24,18 +24,11 @@ export const navItems = [
 export const projects = [
   {
     key: "1",
-    name: "QR Code generator",
-    description: "QR Code generator using React, Tailwind CSS",
-    image: "/images/projects/qrcode.png",
-    github: "https://github.com/K1chel/qr-code-app",
-    demo: "https://qr-code-app-11.vercel.app/",
-  },
-  {
-    key: "2",
-    name: "Phot albumn",
-    description: "MERN stack photo albumn",
-    image: "/images/projects/photo-albumn.png",
-    github: "https://github.com/K1chel/mern-photo-albumn",
+    name: "Bubble Bash | Landing",
+    description: "Landing page for Bubble Bash",
+    image: "/images/projects/bubble_bash.png",
+    github: "https://github.com/K1chel/landing-page",
+    demo: "https://landing-page-kohl-psi-14.vercel.app/",
   },
 ];
 

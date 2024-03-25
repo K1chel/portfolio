@@ -21,16 +21,17 @@ const Hero = () => {
             <h2 className="pointer-events-auto my-2 text-2xl text-slate-400 md:my-4 md:text-4xl">
               I&apos;m a{" "}
               <span className="font-semibold text-indigo-500">
-                Web Developer
+                Software Developer
               </span>
             </h2>
           </Reveal>
           <Reveal>
             <p className="pointer-events-auto max-w-xl text-sm  tracking-wider text-slate-300 md:text-base font-sans">
-              My name is Kyryl , a passionate web developer, with knowledge in a
-              wide range of technologies and frameworks. I specialize in
-              creating responsive, user-friendly websites that marry
-              functionality with aesthetics.
+              My name is <span className="font-semibold">Kyryl</span> and I am a
+              software developer with a passion for creating
+              <span className="font-semibold"> beautiful</span> and
+              <span className="font-semibold"> performant</span> web
+              applications.
             </p>
           </Reveal>
           <Reveal>
