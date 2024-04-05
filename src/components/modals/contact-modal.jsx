@@ -18,7 +18,7 @@ const ContactModalt = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="bg-slate-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
+          className="bg-slate-900/20 backdrop-blur fixed inset-0 z-[999] grid place-items-center overflow-y-scroll cursor-pointer"
         >
           <motion.div
             initial={{ scale: 0, rotate: "12.5deg" }}
@@ -26,8 +26,9 @@ const ContactModalt = () => {
             exit={{ scale: 0, rotate: "0deg" }}
             onClick={(e) => e.stopPropagation()}
             className="bg-gradient-to-br from-violet-600 to-indigo-600 text-white rounded-lg w-full max-w-3xl shadow-xl cursor-default relative overflow-hidden"
+            // bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900
           >
-            <section className="px-4 py-12">
+            <section className="px-4 py-8">
               <div
                 ref={containerRef}
                 onClick={() => {
