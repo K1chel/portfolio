@@ -10,6 +10,7 @@ import { cn } from "./lib/utils";
 
 const App = () => {
   const { visible } = useScrollTop();
+
   return (
     <>
       <Navbar />

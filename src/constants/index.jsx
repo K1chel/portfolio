@@ -24,6 +24,23 @@ export const navItems = [
 export const projects = [
   {
     key: "1",
+    name: "Expanse Tracker",
+    description: "Expanse tracker using NextJS, Convex, TypeScript",
+    image: "/images/projects/expanse_tracker.png",
+    github: "https://github.com/K1chel/expanser",
+    demo: "https://expanse-tracker-app-v1.vercel.app/",
+  },
+  {
+    key: "1",
+    name: "MERN | Real time chat",
+    description: "Real time chat application using MERN stack",
+    image: "/images/projects/chat_app.png",
+    github: "https://github.com/K1chel/MERN-CHAT-APP-V1",
+    demo: "https://mern-chat-app-v1.onrender.com/",
+  },
+
+  {
+    key: "1",
     name: "Bubble Bash | Landing",
     description: "Landing page for Bubble Bash",
     image: "/images/projects/bubble_bash.png",

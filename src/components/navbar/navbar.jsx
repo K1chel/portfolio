@@ -5,7 +5,7 @@ import NavLink from "./nav-link";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full border-b border-zinc-700 z-[999] backdrop-blur-md">
+    <nav className="fixed top-0 w-full border-b border-zinc-700 z-[90] backdrop-blur-md">
       <header className="py-4 max-w-screen-xl mx-auto md:px-5 px-3">
         <div className="flex items-center justify-between">
           <div className="md:flex items-center gap-x-5 text-neutral-500 hidden">
