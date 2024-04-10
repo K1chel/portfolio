@@ -1,4 +1,4 @@
-import ContactModal from "../components/modals/contact-modal";
+import { ContactModal } from "../components/modals/contact-modal";
 
 export const ModalProviders = () => {
   return (
