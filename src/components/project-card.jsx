@@ -1,36 +1,106 @@
+/* eslint-disable no-unused-vars */
+import { motion, useAnimation, useInView } from "framer-motion";
+import { ChevronRightIcon, ExternalLinkIcon, GithubIcon } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./button";
+import Reveal from "../lib/reveal";
+import { ProjectModal } from "./modals/project-modal";
 
 /* eslint-disable react/prop-types */
 export const ProjectCard = ({ project }) => {
-  const { name, description, image, github, demo } = project;
+  const { name, description, image, github, demo, tech_stack, modalContent } =
+    project;
+  const [hovered, setHovered] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const controls = useAnimation();
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView, controls]);
 
   return (
-    <div className="w-full rounded-lg bg-zinc-800 py-4 px-3">
-      <div className="rounded-md w-full h-full flex flex-col gap-y-4">
-        <img
-          src={image}
-          alt={name}
-          className="w-full object-cover rounded-md shadow-lg h-[220px] opacity-80"
-        />
-        <div className="flex flex-col gap-y-1 px-2">
-          <h1 className="text-xl font-bold text-white">{name}</h1>
-          <p className="text-[13px] text-gray-300 tracking-tight">
-            {description}
-          </p>
+    <>
+      <motion.div
+        ref={ref}
+        variants={{
+          hidden: { opacity: 0, y: 100 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={controls}
+        transition={{ duration: 0.75 }}
+      >
+        <div
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          onClick={() => setIsOpen(true)}
+          className="w-full aspect-video bg-zinc-700 cursor-pointer relative rounded-lg overflow-hidden"
+        >
+          <img
+            src={image}
+            alt={`An image of the ${name} project.`}
+            style={{
+              width: hovered ? "90%" : "85%",
+              rotate: hovered ? "2deg" : "0deg",
+            }}
+            className="w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 transition-all rounded"
+          />
         </div>
-        <div className="h-[1px] w-full bg-gray-500" />
-        <div className="flex gap-x-5 justify-start">
-          {demo && (
-            <Link to={`${demo}`} target="_blank">
-              <Button className="border px-5 py-2 rounded-lg">Demo</Button>
-            </Link>
-          )}
-          <Link to={github} target="_blank">
-            <Button className="border px-5 py-2 rounded-lg">GitHub</Button>
-          </Link>
+        <div className="mt-6">
+          <Reveal width="w-full">
+            <div className="flex items-center gap-2 w-full">
+              <h4 className="font-bold lg:text-lg text-base shrink-0 max-w-[calc(100%_-_150px)]">
+                {name}
+              </h4>
+              <div className="w-full h-[1px] bg-zinc-600" />
+
+              <Link to={github} target="_blank">
+                <GithubIcon className="lg:size-5 size-4 text-zinc-300 hover:text-indigo-500 transition-colors" />
+              </Link>
+
+              <Link to={demo} target="_blank">
+                <ExternalLinkIcon className="lg:size-5 size-4 text-zinc-300 hover:text-indigo-500 transition-colors" />
+              </Link>
+            </div>
+          </Reveal>
+          <Reveal>
+            <div className="flex flex-wrap gap-4 lg:text-sm text-xs text-indigo-500 my-2">
+              {tech_stack.join(" - ")}
+            </div>
+          </Reveal>
+          <Reveal>
+            <p className="text-zinc-300 leading-relaxed line-clamp-2 break-words text-sm lg:text-base">
+              {description}{" "}
+            </p>
+            <div
+              className="flex items-center text-sm text-indigo-500 cursor-pointer group py-1"
+              onClick={() => setIsOpen(true)}
+            >
+              Learn more{" "}
+              <ChevronRightIcon className="size-4 group-hover:scale-110 scale-90 group-hover:translate-x-1 transition-all" />
+            </div>
+          </Reveal>
         </div>
-      </div>
-    </div>
+      </motion.div>
+      <ProjectModal
+        modalContent={modalContent}
+        projectLink={demo}
+        setIsOpen={setIsOpen}
+        isOpen={isOpen}
+        imgSrc={image}
+        title={name}
+        code={github}
+        tech={tech_stack}
+      />
+    </>
   );
 };
