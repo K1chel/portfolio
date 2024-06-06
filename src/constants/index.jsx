@@ -181,4 +181,19 @@ export const skills = [
     label: "Git",
     image: "/images/skills/git.png",
   },
+  {
+    key: "11",
+    label: "Stripe",
+    image: "/images/skills/stripe.svg",
+  },
+  {
+    key: "11",
+    label: "PostgreSQL",
+    image: "/images/skills/postgre.png",
+  },
+  {
+    key: "12",
+    label: "ExpressJS",
+    image: "/images/skills/express.png",
+  },
 ];

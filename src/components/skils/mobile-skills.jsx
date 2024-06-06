@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
+import { skills } from "../../constants";
 
 const MobileSkills = () => {
   return (
@@ -45,58 +46,5 @@ const TestimonialList = ({ reverse = false, duration = 50 }) => {
     </motion.div>
   );
 };
-
-const skills = [
-  {
-    key: "1",
-    label: "JavaScript",
-    image: "/images/skills/javascript.png",
-  },
-  {
-    key: "2",
-    label: "NodeJS",
-    image: "/images/skills/nodejs.png",
-  },
-  {
-    key: "3",
-    label: "HTML",
-    image: "/images/skills/html.png",
-  },
-  {
-    key: "4",
-    label: "CSS",
-    image: "/images/skills/css.png",
-  },
-  {
-    key: "5",
-    label: "React",
-    image: "/images/skills/react.png",
-  },
-  {
-    key: "6",
-    label: "NextJS",
-    image: "/images/skills/nextjs.png",
-  },
-  {
-    key: "7",
-    label: "MongoDB",
-    image: "/images/skills/mongodb.png",
-  },
-  {
-    key: "8",
-    label: "TypeScript",
-    image: "/images/skills/typescript.png",
-  },
-  {
-    key: "9",
-    label: "TailwindCSS",
-    image: "/images/skills/tailwind.png",
-  },
-  {
-    key: "10",
-    label: "Git",
-    image: "/images/skills/git.png",
-  },
-];
 
 export default MobileSkills;
