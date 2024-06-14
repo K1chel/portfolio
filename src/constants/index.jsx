@@ -187,12 +187,12 @@ export const skills = [
     image: "/images/skills/stripe.svg",
   },
   {
-    key: "11",
+    key: "12",
     label: "PostgreSQL",
     image: "/images/skills/postgre.png",
   },
   {
-    key: "12",
+    key: "13",
     label: "ExpressJS",
     image: "/images/skills/express.png",
   },
