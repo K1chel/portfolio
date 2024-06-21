@@ -104,6 +104,32 @@ export const projects = [
   },
   {
     key: "4",
+    name: "Auth Boilerplate",
+    description:
+      "Authentication boilerplate using NextJS, Supabase, Lucia Auth, Prisma. This is a boilerplate for authentication using NextJS and Supabase. It includes user registration and login",
+    image: "/images/projects/auth-boilerplate.jpg",
+    tech_stack: ["NextJS, Supabase, Lucia Auth, Prisma"],
+    github: "https://github.com/K1chel/lucia-auth-nextjs-prisma",
+    demo: "https://github.com/K1chel/lucia-auth-nextjs-prisma",
+    modalContent: (
+      <>
+        <p>
+          This project is a boilerplate for authentication using NextJS,
+          Supabase, Lucia Auth, and Prisma.
+        </p>
+        <p>
+          It includes user registration and login functionality, allowing you to
+          quickly set up authentication in your NextJS applications
+        </p>
+        <p>
+          The boilerplate is fully customizable and can be easily integrated
+          into your projects.
+        </p>
+      </>
+    ),
+  },
+  {
+    key: "5",
     name: "Bubble Bash | Landing",
     description:
       "Landing page for Bubble Bash. Reacreating the landing page of Bubble Bash using NextJS",
